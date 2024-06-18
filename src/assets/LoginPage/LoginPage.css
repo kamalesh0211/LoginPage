@@ -1,59 +1,93 @@
+:root {
+  --subColor: rgb(252, 252, 252);
+  --barColor: rgb(37, 37, 4);
+  --borderValue: 0.4px solid black;
+}
+
 .Container {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .Container h1 {
-    text-align: center;
-    font-size: 30px;
+  position: relative;
+  top: 20px;
+  color: var(--subColor);
+
+  text-align: center;
+  font-size: 30px;
 }
 
 form {
-    width: 420px;
-    background-color: rgb(37, 37, 4);
+  width: 420px;
+  background-color: var(--barColor) ;
+  border-radius: 20px;
 }
 
 .Container .Input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-
-    margin: 30px 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 30px 0;
 }
 
 .Input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 40px;
-    color:white;
-    padding: 0px 20px 20px 0;
+  width: 80%; /* Adjust width as needed */
+  max-width: 400px; /* Optional max width for better responsiveness */
+  /* margin: 10px 0; */
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border:  var(--borderValue);
+  border-radius: 40px;
+  color: var(--subColor);
+  padding: 0 0 0 0.98rem;
 }
 
 input::placeholder {
-    text-align: center;
-    letter-spacing: 4px;
-
+  margin: 5px;
+  text-align: center;
+  letter-spacing: 4px;
+  color:var(--barColor);
 }
 
 .Input-box .Icon {
-    position: absolute;
-    top:50%;
-    right:20px;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  transform: translateY(-50%);
 }
 
-.Container .RememberMe{
-    display:flex;
-    justify-content:space-between;
-    font-size:14.5px;
-    margin:-15px 0 15px;
+.Container .RememberMe {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 10px;
+  padding: 0 1rem;
+}
+.RememberMe input[type="checkbox"] {
+    margin-right: 5px;
+    
+}
+.Container label {
+  color: var(--subColor);
+}
+.Container button{
+    position:relative;
+    left:45%;
+    padding:0 10px ;
+    border-radius:20px;
+    border: var(--borderValue);
+    background-color: var(--barColor);
+}
 
+.Container .CreateAccount{
+    position:relative;
+    left:2rem ;
+    bottom:0.45rem;
 }
