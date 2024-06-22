@@ -2,6 +2,7 @@
   --subColor: rgb(252, 252, 252);
   --barColor: rgb(37, 37, 4);
   --borderValue: 0.4px solid black;
+  --commonButtonSize: 14.5px;
 }
 
 .Container {
@@ -9,26 +10,30 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background: url('./Components/assets/backgroundImage.png')
+    no-repeat;
+  background-size: cover; /* Adjust as needed */
+  background-position: center;
 }
 
 .Container h1 {
   position: relative;
   top: 20px;
   color: var(--subColor);
-
   text-align: center;
   font-size: 30px;
 }
 
 form {
+  padding: 40px 20px;
   width: 420px;
-  background-color: var(--barColor) ;
+  background-color: var(--barColor);
   border-radius: 20px;
 }
 
 .Container .Input-box {
   position: relative;
-  width: 100%;
+  width: 100%; /*Input Bar*/
   display: flex;
   justify-content: center;
   height: 50px;
@@ -36,14 +41,12 @@ form {
 }
 
 .Input-box input {
-  width: 80%; /* Adjust width as needed */
-  max-width: 400px; /* Optional max width for better responsiveness */
-  /* margin: 10px 0; */
-  height: 100%;
+  width: 100%;
+  height: 2.5rem;
   background: transparent;
   border: none;
   outline: none;
-  border:  var(--borderValue);
+  border: var(--borderValue);
   border-radius: 40px;
   color: var(--subColor);
   padding: 0 0 0 0.98rem;
@@ -53,41 +56,48 @@ input::placeholder {
   margin: 5px;
   text-align: center;
   letter-spacing: 4px;
-  color:var(--barColor);
+  color: var(--barColor);
 }
 
 .Input-box .Icon {
   position: absolute;
-  top: 50%;
-  right: 4rem;
-  transform: translateY(-50%);
+  top: 40%;
+  right: 0.96rem;
+  transform: translateY(-52%);
 }
 
 .Container .RememberMe {
   display: flex;
   justify-content: space-between;
-  font-size: 14.5px;
+  font-size: var(--commonButtonSize);
   margin: -15px 0 10px;
   padding: 0 1rem;
 }
 .RememberMe input[type="checkbox"] {
-    margin-right: 5px;
-    
+  margin-right: 5px;
 }
 .Container label {
   color: var(--subColor);
 }
-.Container button{
-    position:relative;
-    left:45%;
-    padding:0 10px ;
-    border-radius:20px;
-    border: var(--borderValue);
-    background-color: var(--barColor);
+.Container a {
+  color: var(--subColor);
 }
-
-.Container .CreateAccount{
-    position:relative;
-    left:2rem ;
-    bottom:0.45rem;
+.Container button {
+  /*|Login Button */
+  width: 100%;
+  height: 2.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 30px;
+  border: var(--borderValue);
+  background-color: var(--barColor);
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  outline: none;
+}
+.Container .CreateAccount {
+  padding: 10px 15px;
+  font-size: var(--commonButtonSize);
+  text-align: right;
 }
